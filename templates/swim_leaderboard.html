@@ -1,0 +1,51 @@
+<!--NTURO LEADERBOARDS-->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Leaderboards
+{% endblock %}
+
+{% block main %}
+</br>
+<!--CHALLENGE #1: SWIM LEADERBOARD-->
+<div class="container sections" id="swim_leaderboard">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <h1 style="text-align:center;font-family:ka1;font-size: 3em;">Side Quest 1 Swim</br> Leaderboard</h1>
+        </div>
+    </div>
+</div>
+<input class="form-control" id="swim_input" type="text" placeholder="Search Name...">
+<br>
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">Ranking</th>
+            <th scope="col">Name</th>
+            <th scope="col">Time Submitted</th>
+        </tr>
+    </thead>
+    <tbody id="swim_table">
+        {% for entry in swim %}
+        <tr>
+            {% for data in entry %}
+            <td>{{data}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<script>
+    $(document).ready(function(){
+      $("#swim_input").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#swim_table tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+</script>
+
+
+{% endblock %}

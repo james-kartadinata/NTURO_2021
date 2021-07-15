@@ -1,0 +1,50 @@
+<!--NTURO LEADERBOARDS-->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Leaderboards
+{% endblock %}
+
+{% block main %}
+</br>
+<!--LEADERBOARD-->
+<div class="container sections" id="leaderboard">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <h1 style="text-align:center;font-family:ka1;font-size: 3em;">{{category}} Leaderboard</h1>
+        </div>
+    </div>
+</div>
+<input class="form-control" id="leaderboard_input" type="text" placeholder="Search Name...">
+<br>
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">Ranking</th>
+            <th scope="col">Name</th>
+            <th scope="col">Total Distance (KM)</th>
+        </tr>
+    </thead>
+    <tbody id="table">
+        {% for entry in values %}
+        <tr>
+            {% for data in entry %}
+            <td>{{data}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<script>
+    $(document).ready(function(){
+        $("#leaderboard_input").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#table tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+        });
+    });
+</script>
+
+{% endblock %}

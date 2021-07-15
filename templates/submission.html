@@ -1,0 +1,146 @@
+<!--NTURO SUBMISSION PAGE-->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Submissions
+{% endblock %}
+
+{% block main %}
+<br/>
+    <div class="container sections" id="submission">
+        <div class="row">
+            <div class="col-md-12 mx-auto" style="background-color: rgb(255, 196, 0);">
+                <h1 style="text-align:center;font-family: arcade;font-size: 5em;">Activity Submission</h1>
+            </div>
+        </div>
+    </br>
+        <div class="row">
+            <div class="col-md-8">
+                <p style="text-align:justify;">
+                    To submit your activity, select your gender and race category below and click on the "Submit Activity" button. You will then be redirected to a Google Form (Google sign in will be required). Fill in the form with your details and upload a screenshot of your activity. Do ensure that the <b>DATE</b> and <b>DISTANCE</b> is included in your screenshot, otherwise we will be unable to verify your activity! A sample screenshot is shown on the right.               
+                    <div style="text-align: justify;">
+                        Do take note that if you would like the activities submitted as part of this week's challenge to count towards your total distance for the main race, the same activity must be submitted twice:
+                        <ul>
+                            <li>Once under the "Side Quest" race category</li>
+                            <li>Once under the race category that you have signed up for</li>
+                        </ul>
+                    </div>
+                    <div>
+                        For more information regarding the submissions process, you may refer to our following guides:
+                        <ul>
+                            <li><a href="/static/documents/Submission_Steps.pdf" target="_blank">Race Submission Guide</a></li>
+                            <li><a href="/static/documents/Challenge1_Submission_Steps.pdf" target="_blank">Side Quest #1 (Swim) Submission Guide</a></li>
+                            <li><a href="/static/documents/Challenge2_Submission_Steps.pdf" target="_blank">Side Quest #2 (Creativity) Submission Guide</a></li>
+                            <li><a href="/static/documents/Challenge3_Submission_Steps.pdf" target="_blank">Side Quest #3 (Elevation) Submission Guide</a></li>
+                            
+                        </ul>
+                    </div>
+                </p>   
+                
+                <form class="needs-validation" action="/submission" method="POST" id="submissionForm" novalidate>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Gender</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                                    <label class="form-check-label" for="male">Male</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
+                                    <label class="form-check-label" for="female">Female</label>
+                                    <div class="invalid-feedback">Please select your gender</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </br>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Race Category</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="race_cat" id="indiv_10km" value="indiv_10km" required>
+                                    <label class="form-check-label" for="indiv_10km">Individual 10KM</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="race_cat" id="indiv_42km" value="indiv_42km" required>
+                                    <label class="form-check-label" for="indiv_42km">Individual 42KM</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="race_cat" id="indiv_75km" value="indiv_75km" required>
+                                    <label class="form-check-label" for="indiv_75km">Individual 75KM</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="race_cat" id="indiv_100km" value="indiv_100km" required>
+                                    <label class="form-check-label" for="indiv_100km">Individual 100KM</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="race_cat" id="team_42km" value="team_42km" required>
+                                    <label class="form-check-label" for="team_42km">Team of 2 - 42KM</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="race_cat" id="team_200km" value="team_200km" required>
+                                    <label class="form-check-label" for="team_200km">Team of 4 - 200KM</label>
+                                    <!--Remember to disable the following invalid feedback tag when challenge submission is available-->
+                                    <div class="invalid-feedback">Please select your category</div>
+                                </div>
+                                <!--<div class="form-check">
+                                    <input class="form-check-input" type="radio" name="race_cat" id="challenge1" value="challenge1" required>
+                                    <label class="form-check-label" for="challenge1">Side Quest #1: Swim</label>
+                                    <div class="invalid-feedback">Please select your category</div>
+                                </div>-->
+                                <!--<div class="form-check">
+                                    <input class="form-check-input" type="radio" name="race_cat" id="challenge2" value="challenge2" required>
+                                    <label class="form-check-label" for="challenge2">Side Quest #2: Creativity</label>
+                                    <div class="invalid-feedback">Please select your category</div>
+                                </div>-->
+                                <!--<div class="form-check">
+                                    <input class="form-check-input" type="radio" name="race_cat" id="challenge3" value="challenge3" required>
+                                    <label class="form-check-label" for="challenge3">Side Quest #3: Elevation</label>
+                                    <div class="invalid-feedback">Please select your category</div>
+                                </div>-->
+                            </div>         
+                        </div>
+                    </div>
+                </br>
+                    <div class = "text-center">
+                        <!--<button type="submit" class="btn btn-success" style="background-color:rgb(0, 70, 221);font-size:40px;" disabled>NTURO 2021 has not started.<br> Please submit from 1 June onwards.</button>
+                        <button type="submit" class="btn btn-success" style="background-color:rgb(0, 70, 221);font-size:40px;">Submit Activity</button>-->
+                        <button type="submit" class="btn btn-success" style="background-color:rgb(0, 70, 221);font-size:40px;" disabled>NTURO 2021 has ended!</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center"><img src="/static/images/Screenshot_Example.jpg" class="img-fluid"></div>
+            </div>
+        </div>
+    </br>
+        
+    </div>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+    </script>
+{% endblock %}

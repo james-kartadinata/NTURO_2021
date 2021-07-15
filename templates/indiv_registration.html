@@ -1,0 +1,194 @@
+<!--NTURO INDIVIDUAL REGISTRATION-->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Individual Registration
+{% endblock %}
+
+{% block main %}
+<br/>
+<div class="container sections" id="indiv_registration">
+    <div class="row">
+        <div class="col-md-9 mx-auto">
+            <h1 style="text-align:center;">Individual Registration</h1>
+        </div>
+    </div>
+</div>
+<div class="container">    
+    <form class="needs-validation" action="/indiv_registration" method="POST" id="indiv_regForm" novalidate>
+        <div id="particulars" class="card">
+            <div class="card-header">
+                <h3>Personal Particulars</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="name">Full Name (As shown in NRIC/FIN)</label>
+                    <input type="text" class="form-control needs-validation" id="name" name="name" required>
+                    <div class="invalid-feedback">Please enter your name</div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <legend class="col-form-label">Gender</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="Male" value="male" required>
+                        <label class="form-check-label" for="Male">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="Female" value="female" required>
+                        <label class="form-check-label" for="Female">Female</label>
+                        <div class="invalid-feedback">Please select your gender</div>
+                    </div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email"  class="form-control" name="email" id="email" required>
+                    <div class="invalid-feedback">Please enter a valid email</div>
+                </div>
+            </br>
+                <div class="form-group nativeDatePicker">
+                    <label for="dob">Date Of Birth</label>
+                    <input type="date" class="form-control" name="dob" id="dob" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required>
+                    <div class="invalid-feedback">Select your date of birth using the date picker (only on recent browsers). Otherwise, enter it in the following format MM-DD-YYYY</div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <label for="phone">Mobile Number</label>
+                    <input type="tel" class="form-control" pattern="[0-9]{8,15}" name="phone" id="phone" required>
+                    <div class="invalid-feedback">Please enter your mobile number and ensure that the number is valid</div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <label for="nric">Last 5 characters of NRIC/FIN (eg 1234Z)</label>
+                    <input type="text" class="form-control" name="nric" id="nric" required>
+                    <div class="invalid-feedback">Please enter your identification</div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" name="address" id="address" required>
+                    <div class="invalid-feedback">Please enter your address</div>
+                </div>
+            </div>
+        </div>
+    </br>
+        <div id="race" class="card">
+            <div class="card-header">
+                <h3>Race Details</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <legend class="col-form-label">Race Category (Individual)</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="indiv_cat" id="10km" value="10km" required>
+                        <label class="form-check-label" for="10km">10KM</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="indiv_cat" id="42km" value="42km" required>
+                        <label class="form-check-label" for="42km">42KM</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="indiv_cat" id="75km" value="75km" required>
+                        <label class="form-check-label" for="75km">75KM</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="indiv_cat" id="100km" value="100km" required>
+                        <label class="form-check-label" for="100km">100KM</label>
+                        <div class="invalid-feedback">Please select your category</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </br>
+        <div id="apparel" class="card">
+            <div class="card-header">
+                <h3>Apparel</h3>
+            </div>
+            <div class="card-body">
+                <div class = "text-center"><img src="/static/images/size_chart.jpeg" class="img-fluid"></div>
+                <div class="form-group">
+                    <legend class="col-form-label">Shirt Size</legend>
+                    <!--<div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size" id="XXS" value="XXS" required>
+                        <label class="form-check-label" for="XXS">XXS</label>
+                    </div>-->
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size" id="XS" value="XS" required>
+                        <label class="form-check-label" for="XS">XS</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size" id="S" value="S" required>
+                        <label class="form-check-label" for="S">S</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size" id="M" value="M" required>
+                        <label class="form-check-label" for="M">M</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size" id="L" value="L" required>
+                        <label class="form-check-label" for="L">L</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size" id="XL" value="XL" required>
+                        <label class="form-check-label" for="XL">XL</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size" id="XXL" value="XXL" required>
+                        <label class="form-check-label" for="XXL">XXL</label>
+                        <div class="invalid-feedback">Please select your shirt size</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </br>
+        <div id="acknowledgement" class="card">
+            <div class="card-header">
+                <h3>Personal Data Collection Acknowledgement</h3>
+            </div>
+            <div class="card-body">
+                <p style="text-align: justify;">
+                    By clicking 'I Agree', you agree that NTU Aquathlon may collect, use and disclose your personal data, as provided in this application form, or (if applicable), obtained by our organization as a result of registering for this program, for the following purposes in accordance with the Personal Data Protection Act 2012 and our data protection policy: 
+                    <ul style="text-align: left;">
+                        <li>The processing of your registration for NTURO 2021</li>
+                        <li>Administering and managing of NTURO 2021</li> 
+                        <li>Use of photographs/videos uploaded on social media during NTURO 2021 for NTURO's marketing and publicity purposes in print, electronic, and social media</li>
+                    </ul>
+                    Please contact us for further details on our data protection policy, including how you may access and correct your personal data or withdraw consent to the collection, use or disclosure of your personal data.
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="data" id="agree" value="agree" required>
+                    <label class="form-check-label" for="agree">I Agree to the Personal Data Collection Acknowledgement</label>
+                    <div class="invalid-feedback">Your consent is required in order to proceed with registration</div>
+                </div>
+            </div>
+        </div>
+    </br>
+        <div class = "text-center">
+          <button type="submit" class="btn btn-success" style="background-color:green;font-size:40px;">Proceed to Payment</button>
+        </div>
+    </br>
+    </form>
+</div>
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+</script>
+{% endblock %}

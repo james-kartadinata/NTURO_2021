@@ -1,0 +1,380 @@
+<!--NTURO INDIVIDUAL REGISTRATION-->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Individual Registration (Bundle)
+{% endblock %}
+
+{% block main %}
+<br/>
+<div class="container sections" id="bundle_indiv_registration">
+    <div class="row">
+        <div class="col-md-9 mx-auto">
+            <h1 style="text-align:center;">Individual Registration (Bundle)</h1>
+        </div>
+    </div>
+</div>
+<div class="container">    
+    <form class="needs-validation" action="/bundle_indiv_registration" method="POST" id="indiv_regForm" novalidate>
+        <div id="race" class="card">
+            <div class="card-header">
+                <h3>Race Details</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <legend class="col-form-label">Race Category (Individual)</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="indiv_cat" id="75km" value="75km" required>
+                        <label class="form-check-label" for="75km">75KM</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="indiv_cat" id="100km" value="100km" required>
+                        <label class="form-check-label" for="100km">100KM</label>
+                        <div class="invalid-feedback">Please select your category</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </br>
+        <div id="particulars1" class="card">
+            <div class="card-header">
+                <h3>Personal Particulars (Member 1)</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="name1">Full Name (As shown in NRIC/FIN)</label>
+                    <input type="text" class="form-control needs-validation" id="name1" name="name1" required>
+                    <div class="invalid-feedback">Please enter your name</div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <legend class="col-form-label">Gender</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender1" id="Male1" value="male" required>
+                        <label class="form-check-label" for="Male1">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender1" id="Female1" value="female" required>
+                        <label class="form-check-label" for="Female1">Female</label>
+                        <div class="invalid-feedback">Please select your gender</div>
+                    </div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <label for="email1">Email</label>
+                    <input type="email"  class="form-control" name="email1" id="email1" required>
+                    <div class="invalid-feedback">Please enter a valid email</div>
+                </div>
+            </br>
+                <div class="form-group nativeDatePicker">
+                    <label for="dob1">Date Of Birth</label>
+                    <input type="date" class="form-control" name="dob1" id="dob1" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required>
+                    <div class="invalid-feedback">Select your date of birth using the date picker (only on recent browsers). Otherwise, enter it in the following format MM-DD-YYYY</div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <label for="phone1">Mobile Number</label>
+                    <input type="tel" class="form-control" pattern="[0-9]{8,15}" name="phone1" id="phone1" required>
+                    <div class="invalid-feedback">Please enter your mobile number and ensure that the number is valid</div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <label for="nric1">Last 5 characters of NRIC/FIN (eg 1234Z)</label>
+                    <input type="text" class="form-control" name="nric1" id="nric1" required>
+                    <div class="invalid-feedback">Please enter your identification</div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <label for="address1">Address</label>
+                    <input type="text" class="form-control" name="address1" id="address1" required>
+                    <div class="invalid-feedback">Please enter your address</div>
+                </div>
+            </div>
+        </div>    
+    </br>
+        <div id="apparel1" class="card">
+            <div class="card-header">
+                <h3>Apparel (Member 1)</h3>
+            </div>
+            <div class="card-body">
+                <div class = "text-center"><img src="/static/images/size_chart.jpeg" class="img-fluid"></div>
+                <div class="form-group">
+                    <legend class="col-form-label">Shirt Size</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size1" id="XXS1" value="XXS" required>
+                        <label class="form-check-label" for="XXS1">XXS</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size1" id="XS1" value="XS" required>
+                        <label class="form-check-label" for="XS1">XS</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size1" id="S1" value="S" required>
+                        <label class="form-check-label" for="S1">S</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size1" id="M1" value="M" required>
+                        <label class="form-check-label" for="M1">M</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size1" id="L1" value="L" required>
+                        <label class="form-check-label" for="L1">L</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size1" id="XL1" value="XL" required>
+                        <label class="form-check-label" for="XL1">XL</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size1" id="XXL1" value="XXL" required>
+                        <label class="form-check-label" for="XXL1">XXL</label>
+                        <div class="invalid-feedback">Please select your shirt size</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </br>
+        <div id="particulars2" class="card">
+            <div class="card-header">
+                <h3>Personal Particulars (Member 2)</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="name2">Full Name (As shown in NRIC/FIN)</label>
+                    <input type="text" class="form-control needs-validation" id="name2" name="name2" required>
+                    <div class="invalid-feedback">Please enter your name</div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <legend class="col-form-label">Gender</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender2" id="Male2" value="male" required>
+                        <label class="form-check-label" for="Male2">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender2" id="Female2" value="female" required>
+                        <label class="form-check-label" for="Female2">Female</label>
+                        <div class="invalid-feedback">Please select your gender</div>
+                    </div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <label for="email2">Email</label>
+                    <input type="email"  class="form-control" name="email2" id="email2" required>
+                    <div class="invalid-feedback">Please enter a valid email</div>
+                </div>
+            </br>
+                <div class="form-group nativeDatePicker">
+                    <label for="dob2">Date Of Birth</label>
+                    <input type="date" class="form-control" name="dob2" id="dob2" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required>
+                    <div class="invalid-feedback">Select your date of birth using the date picker (only on recent browsers). Otherwise, enter it in the following format MM-DD-YYYY</div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <label for="phone2">Mobile Number</label>
+                    <input type="tel" class="form-control" pattern="[0-9]{8,15}" name="phone2" id="phone2" required>
+                    <div class="invalid-feedback">Please enter your mobile number and ensure that the number is valid</div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <label for="nric2">Last 5 characters of NRIC/FIN (eg 1234Z)</label>
+                    <input type="text" class="form-control" name="nric2" id="nric2" required>
+                    <div class="invalid-feedback">Please enter your identification</div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <label for="address2">Address</label>
+                    <input type="text" class="form-control" name="address2" id="address2" required>
+                    <div class="invalid-feedback">Please enter your address</div>
+                </div>
+            </div>
+        </div>    
+    </br>
+        <div id="apparel2" class="card">
+            <div class="card-header">
+                <h3>Apparel (Member 2)</h3>
+            </div>
+            <div class="card-body">
+                <div class = "text-center"><img src="/static/images/size_chart.jpeg" class="img-fluid"></div>
+                <div class="form-group">
+                    <legend class="col-form-label">Shirt Size</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size2" id="XXS2" value="XXS" required>
+                        <label class="form-check-label" for="XXS2">XXS</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size2" id="XS2" value="XS" required>
+                        <label class="form-check-label" for="XS2">XS</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size2" id="S2" value="S" required>
+                        <label class="form-check-label" for="S2">S</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size2" id="M2" value="M" required>
+                        <label class="form-check-label" for="M2">M</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size2" id="L2" value="L" required>
+                        <label class="form-check-label" for="L2">L</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size2" id="XL2" value="XL" required>
+                        <label class="form-check-label" for="XL2">XL</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size2" id="XXL2" value="XXL" required>
+                        <label class="form-check-label" for="XXL2">XXL</label>
+                        <div class="invalid-feedback">Please select your shirt size</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </br>
+        <div id="particulars3" class="card">
+            <div class="card-header">
+                <h3>Personal Particulars (Member 3)</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="name3">Full Name (As shown in NRIC/FIN)</label>
+                    <input type="text" class="form-control needs-validation" id="name3" name="name3" required>
+                    <div class="invalid-feedback">Please enter your name</div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <legend class="col-form-label">Gender</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender3" id="Male3" value="male" required>
+                        <label class="form-check-label" for="Male3">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender3" id="Female3" value="female" required>
+                        <label class="form-check-label" for="Female3">Female</label>
+                        <div class="invalid-feedback">Please select your gender</div>
+                    </div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <label for="email3">Email</label>
+                    <input type="email"  class="form-control" name="email3" id="email3" required>
+                    <div class="invalid-feedback">Please enter a valid email</div>
+                </div>
+            </br>
+                <div class="form-group nativeDatePicker">
+                    <label for="dob3">Date Of Birth</label>
+                    <input type="date" class="form-control" name="dob3" id="dob3" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required>
+                    <div class="invalid-feedback">Select your date of birth using the date picker (only on recent browsers). Otherwise, enter it in the following format MM-DD-YYYY</div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <label for="phone3">Mobile Number</label>
+                    <input type="tel" class="form-control" pattern="[0-9]{8,15}" name="phone3" id="phone3" required>
+                    <div class="invalid-feedback">Please enter your mobile number and ensure that the number is valid</div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <label for="nric3">Last 5 characters of NRIC/FIN (eg 1234Z)</label>
+                    <input type="text" class="form-control" name="nric3" id="nric3" required>
+                    <div class="invalid-feedback">Please enter your identification</div>
+                </div>
+            </br>
+                <div class="form-group">
+                    <label for="address3">Address</label>
+                    <input type="text" class="form-control" name="address3" id="address3" required>
+                    <div class="invalid-feedback">Please enter your address</div>
+                </div>
+            </div>
+        </div>    
+    </br>
+        <div id="apparel" class="card">
+            <div class="card-header">
+                <h3>Apparel (Member 3)</h3>
+            </div>
+            <div class="card-body">
+                <div class = "text-center"><img src="/static/images/size_chart.jpeg" class="img-fluid"></div>
+                <div class="form-group">
+                    <legend class="col-form-label">Shirt Size</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size3" id="XXS3" value="XXS" required>
+                        <label class="form-check-label" for="XXS3">XXS</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size3" id="XS3" value="XS" required>
+                        <label class="form-check-label" for="XS3">XS</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size3" id="S3" value="S" required>
+                        <label class="form-check-label" for="S3">S</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size3" id="M3" value="M" required>
+                        <label class="form-check-label" for="M3">M</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size3" id="L3" value="L" required>
+                        <label class="form-check-label" for="L3">L</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size3" id="XL3" value="XL" required>
+                        <label class="form-check-label" for="XL3">XL</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="shirt_size3" id="XXL3" value="XXL" required>
+                        <label class="form-check-label" for="XXL3">XXL</label>
+                        <div class="invalid-feedback">Please select your shirt size</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </br>
+        <div id="acknowledgement" class="card">
+            <div class="card-header">
+                <h3>Personal Data Collection Acknowledgement</h3>
+            </div>
+            <div class="card-body">
+                <p style="text-align: justify;">
+                    By clicking 'I Agree', you agree that NTU Aquathlon may collect, use and disclose your personal data, as provided in this application form, or (if applicable), obtained by our organization as a result of registering for this program, for the following purposes in accordance with the Personal Data Protection Act 2012 and our data protection policy: 
+                    <ul style="text-align: left;">
+                        <li>The processing of your registration for NTURO 2021</li>
+                        <li>Administering and managing of NTURO 2021</li> 
+                        <li>Use of photographs/videos uploaded on social media during NTURO 2021 for NTURO's marketing and publicity purposes in print, electronic, and social media</li>
+                    </ul>
+                    Please contact us for further details on our data protection policy, including how you may access and correct your personal data or withdraw consent to the collection, use or disclosure of your personal data.
+                </p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="data" id="agree" value="agree" required>
+                    <label class="form-check-label" for="agree">I Agree to the Personal Data Collection Acknowledgement</label>
+                    <div class="invalid-feedback">Your consent is required in order to proceed with registration</div>
+                </div>
+            </div>
+        </div>
+    </br>
+        <div class = "text-center">
+          <button type="submit" class="btn btn-success" style="background-color:green;font-size:40px;">Proceed to Payment</button>
+        </div>
+    </br>
+    </form>
+</div>
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+</script>
+{% endblock %}

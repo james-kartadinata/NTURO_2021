@@ -1,0 +1,141 @@
+<!--NTURO ABOUT PAGE-->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block main %}
+</br>
+    <div class="container-fluid sections p-5" id="about">    
+        <div class="row">
+            <div class="col-md-12 mx-auto" style="background-color: rgb(255, 196, 0);">
+                <h1 style="text-align:center;font-family: arcade;font-size: 5em;">About NTURO</h1>
+            </div>
+        </div>
+    </br>
+        <div class="row">
+            <div class="col-md-5">
+                <img src="/static/images/ntuaquathlon/NTURO_2019.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-7">
+                <p style="text-align:justify;">
+                    Organized by NTU Aquathlon, NTURO was first held in 2019 and was well received. In 2020, the second edition of NTURO had to be cancelled due to the Covid-19 pandemic. In line with the current situation and adhering to safe distancing measures, NTURO 2021 will be focused on running and it will be held virtually during June 2021, allowing participants to complete the race at their own convenience. 
+                    </br></br>
+                    This year, NTURO will be following the theme of virtual games. Whether you're a new or pro player, there's bound to be a suitable difficulty for everyone. Various side quests will also be released, allowing players to level up their fitness. What are you waiting for? Sign up now and start your fitness adventure! 
+                </p>
+                <div class="text-center"><img src="/static/images/nturo_logos/horizontal.png" class="img-fluid" style="height:180px;"></div>
+            </div>
+        </div>
+    </br>
+        <div class="row" id="committee" style="padding-top: 3em;">
+            <div class="col-md-12 mx-auto" style="background-color: rgb(255, 196, 0);">
+                <h1 style="text-align:center;font-family: arcade;font-size: 5em;">Meet the Committee</h1>
+            </div>
+        </div>
+    </br>
+        <div class="row">
+            <div class="col-md-6">
+                <h3 style="text-align:center;" id="header">NTURO 2021 Committees</h3>
+                <p style="text-align:justify;" id="description">Click on each committee to find out more about them!</p>
+            </div>
+            <div class="col-md-6">
+                <img id="image" class="img-fluid map" src="/static/images/committee/collated-min.png" usemap="#committeemap">
+                <map name="committeemap">
+                    <area name="biz" class="clickable-image" shape="rect" coords="50,10,300,60" onclick="biz()">
+                    <area name="finance" class="clickable-image" shape="rect" coords="400,10,650,60" onclick="finance()">
+                    <area name="pnp" class="clickable-image" shape="rect" coords="50,280,300,330" onclick="pnp()">
+                    <area name="logistics" class="clickable-image" shape="rect" coords="400,280,650,330" onclick="logistics()">
+                  </map>
+            </div>
+        </div>
+    </br>
+        <div class="row" id="team" style="padding-top: 3em;">
+            <div class="col-md-12 mx-auto" style="background-color: rgb(255, 196, 0);">
+                <h1 style="text-align:center;font-family: arcade;font-size: 5em;">NTU Aquathlon</h1>
+            </div>
+        </div>
+    </br>
+        <div class="row">
+            <div class="col-md-5">
+                <img src="/static/images/ntuaquathlon/SUNIG_2019.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-7">
+                <p style="text-align:justify">
+                    NTU Aquathlon is a swim-run sport based in Nanyang Technological University. It was first established in 2010 by a group of multi-sport enthusiasts who were committed to training and competing. Since then, NTU Aquathlon has been an active participant of the Singapore University Games (SUniG).  
+                    </br></br>
+                    Outside school, the team also actively participates in various races such as Singapore Aquathlon, SMU SwimRunSprint, NUS Biathlon, Metasprint Series, Trifactor Series, Army Half Marathon and Standard Chartered Marathon. Having a rigorous training regime and deep interest in racing, NTU Aquathlon started to organise her very own race — NTURO.
+                </p>
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="text-center"><img src="/static/images/logos/aquathlon.png" class="img-fluid"></div>
+                    </div>
+                    <div class="col-md-7">
+                        <p style="text-align:justify;">
+                            Find out more about the team through the following channels!
+                            </br></br>
+                            <img src="/static/images/logos/ig.png" alt="IG Logo" style="max-height:24px;"> Instagram: <a href="https://www.instagram.com/ntuaquathlon/" target="_blank">@ntuaquathlon</a>
+                            </br></br>
+                            <img src="/static/images/logos/fb.png" alt="FB Logo" style="max-height:24px;"> Facebook: <a href="http://ntuaquathlon.com" target="_blank">NTU Aquathlon</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="2019" style="padding-top: 3em;">
+            <div class="col-md-12 mx-auto" style="background-color: rgb(255, 196, 0);">
+                <h1 style="text-align:center;font-family: arcade;font-size: 5em;">NTURO 2019</h1>
+            </div>
+        </div>
+        </br>
+        <div class="row">
+            <div class="col-md-7">
+                <p style="text-align: justify;">NTURO (pronounced: N-TU-RO) was founded by Marcus and Kalai (class of 2019), who regularly trained under NTU Aquathlon. Having been exposed to the thrill and sense of accomplishment of competing in a multi-sport event, the duo were hoping that others could also share similar experiences. NTURO was the perfect platform to do so due to the intensity and seriousness of the Singapore University Games (SUniG), an inter University competition that the Aquathlon members were dedicated to train hard for.</p>
+                <p style="text-align: justify;">Marcus shared, “The perspective of most people is that multisport is tough, so I believe that NTURO can help bridge the gap, unite all the multisport enthusiasts and help grow the sport together.”</p>
+                <p style="text-align: justify;">Marcus and Kalai had the vision of adopting the ENDURO race format, which originated from Super League Triathlon, into NTURO. They kicked off NTU Aquathlon’s first ever self-run race, NTURO 2019. It featured a non-stop burst of swim-run-swim-run-swim-run, where participants completed sets of 300m swim and 2km run.</p>
+                <p style="text-align: justify;">Besides impacting the public, NTURO had greatly benefitted the members of NTU Aquathlon. Oftentimes, committee members had to work from scratch. They experienced first-hand the challenges of event planning and put into practice skills such as communication and time-management. Together, they also got to know each other better and bonded well within the team. Indeed, NTURO provided members with a holistic experience as they gained insights which swimming and running cannot offer.</p>
+                <p style="text-align: justify;">With all committee members working hard behind the scenes and the athletes gearing up for NTURO 2021, we wish everyone a memorable race experience!</p>
+                <p style="text-align: justify;">Click the links below to view exclusive scenes from NTURO 2019!</br>
+                    <a href="https://www.facebook.com/media/set/?vanity=NTURO&set=a.348014815817532" target="_blank">NTURO 2019 Part 1</a></br>
+                    <a href="https://www.facebook.com/media/set/?vanity=NTURO&set=a.348016792484001" target="_blank">NTURO 2019 Part 2</a></br>
+                    <a href="https://www.facebook.com/media/set/?vanity=NTURO&set=a.348019789150368" target="_blank">NTURO 2019 Part 3</a></br>
+                    <a href="https://www.facebook.com/media/set/?vanity=NTURO&set=a.348026262483054" target="_blank">NTURO 2019 Part 4</a></br>
+                    <a href="https://www.facebook.com/media/set/?vanity=NTURO&set=a.348760362409644" target="_blank">NTURO 2019 Part 5</a>
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img src="/static/images/ntuaquathlon/2019.jpg" class="img-fluid"></br></br></br>
+                <div class="text-center"><img src="/static/images/nturo_logos/logo.png" class="img-fluid" style="height:200px;"></div>
+            </div>
+        </div>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+<script>$(function() {
+  $('.map').maphilight({fill:false,strokeColor:"008000",strokeWidth:5});
+});</script>
+<script>
+    function biz() {
+        document.getElementById("description").innerHTML = "Ever wondered who’s responsible for all the goodies in your race entitlements? That’s right, it’s us! The BizMag Committee is responsible for sourcing partners that are aligned with NTURO’s goals. With the help of our sponsors, we aim to give NTURO participants a fulfilling race experience through exciting prizes and goodie bags!";
+        document.getElementById("header").innerHTML = "Biz Mag";
+    }
+
+    function finance() {
+        document.getElementById("description").innerHTML = "Did you find our pricing competitive? Well, that came from the detailed work by the Finance committee. Our team worked on forecasting the revenue and costs for NTURO, ensuring affordable prices for all our participants. We also facilitate payments made by the participants to ensure a smooth registration process.";
+        document.getElementById("header").innerHTML = "Finance";
+    }
+
+    function logistics() {
+        document.getElementById("description").innerHTML = "Frantically sending your screenshots to us? Can’t wait for your goodie bags? Worry not, for the logistics team has your back! Our team ensures that all your distances clocked are safely captured, leaderboards accurately updated and your long anticipated goodie bags packed and sent to you with care!";
+        document.getElementById("header").innerHTML = "Logistics";
+    }
+
+    function pnp() {
+        document.getElementById("description").innerHTML = "Enjoyed our Instagram posts, stories and captions? The P&P warriors played the key role behind what you see on your screens. We churn out ideas and share them on our various NTURO social media platforms to provide entertainment and education, engage with our friends and partners, and entice participants to join our event! ";
+        document.getElementById("header").innerHTML = "P&P";
+    }
+    
+</script>
+{% endblock %}

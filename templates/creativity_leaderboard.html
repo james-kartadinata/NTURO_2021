@@ -1,0 +1,55 @@
+<!--NTURO LEADERBOARDS-->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Leaderboards
+{% endblock %}
+
+{% block main %}
+</br>
+<!--CHALLENGE #2: CREATIVITY LEADERBOARD-->
+<div class="container sections" id="creativity_leaderboard">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <h1 style="text-align:center;font-family:ka1;font-size: 3em;">Side Quest 2 Creativity Leaderboard</h1>
+        </div>
+    </div>
+</div>
+<br>
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">Ranking</th>
+            <th scope="col">Name</th>
+            <th scope="col">Submitted Image</th>
+        </tr>
+    </thead>
+    <tbody id="creativity_table">
+        <tr>
+            <td>1</td>
+            <td>Teo Yu Rong</td>
+            <td>
+                <img src="/static/images/creativity/creativity_1.jpg" class="img-fluid" style="height: 10em;"></br>
+                <a href="/static/images/creativity/creativity_1.jpg" target="_blank">Full Image</a>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Mak Weng Wai</td>
+            <td>
+                <img src="/static/images/creativity/creativity_2.jpg" class="img-fluid" style="height: 10em;"></br>
+                <a href="/static/images/creativity/creativity_2.jpg" target="_blank">Full Image</a>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Nurul Arinah Binte Mohamed Aidit</td>
+            <td>
+                <img src="/static/images/creativity/creativity_3.jpg" class="img-fluid" style="height: 10em;"></br>
+                <a href="/static/images/creativity/creativity_3.jpg" target="_blank">Full Image</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

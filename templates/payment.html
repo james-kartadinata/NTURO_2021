@@ -1,0 +1,110 @@
+<!--NTURO PAYMENT-->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Payment
+{% endblock %}
+
+{% block main %}
+<br/>
+    <div class="container sections" id="payment">
+        <div class="row">
+            <div class="col-md-9 mx-auto">
+                <h1 style="text-align:center;">NTURO Race Payment</h1>
+            </div>
+        </div>
+    </div>
+
+<div class="container">    
+    <form class="needs-validation" action="/payment/{{race_cat}}/{{name}}/{{gender}}" method="POST" id="payment_form" enctype="multipart/form-data" novalidate>
+        <div id="instructions" class="card">
+            <div class="card-header">
+                <h3>Payment Instructions</h3>
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                <p>Please note that we are using PayNow as our payment method.</p> 
+                <p>PayNow accepts payment from 9 bank's mobile banking apps (including PayLah!, OCBC payanyone). More information about PayNow <a href="https://www.abs.org.sg/consumer-banking/pay-now" target="_blank">here</a>.</p>
+                If you are using a phone, choose 1 of the following 2 methods:
+                    <ul>
+                        <li>You'll need to screenshot the QR code, go to your banking app and scan the QR code through your photos library. See the steps <a href="/static/documents/Payment_Steps.pdf" target="_blank">here</a>!</li>
+                        <li>Use another phone to scan the QR code</li>
+                    </ul>
+                <p>If you are using a computer, you can use your mobile banking app to scan the QR code.</p>
+                <p>Please enter the last 5 characters of your NRIC (eg. 1234A) as submitted during registration in the PayNow Comments section for easy identification. An example is shown below (price shown may differ depending on category).
+                    <div class = "text-center"><img src="/static/images/Payment_Example.jpg" class="img-fluid"></div>
+                </p>
+                If you have any questions or problems with registration or payment, you can pop us an email at <a href="mailto: nturo.aquathlon@gmail.com?subject=NTURO%202021%20Registration/Payment">nturo.aquathlon@gmail.com</a> and we will reply you as soon as we can!
+                </div>
+            </div>
+        </div>
+        </br>
+        <div id="qr_code" class="card">
+            <div class="card-header">
+                <h3>Payment Details</h3>
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    The payment details are as follows:</br></br>
+                    <div class="table-responsive">
+                        <table class="table">
+                          <tbody>
+                          <tr>
+                            <th>Race Category</th>
+                            <td>{{race_cat}}</td>
+                          </tr>
+                          <tr>
+                            <th>Amount</th>
+                            <td>{{amount}}</td>
+                          </tr>
+                        </tbody>
+                        </table>
+                      </div>
+                </div>
+                <h5 class="card-title">PayNow QR Code</h5>
+                <div class = "text-center"><img src={{qr_code_path}} class="img-fluid"></div>
+            </div>
+        </div>
+    </br>
+        <div id="confirm" class="card">
+            <div class="card-header">
+                <h3>Confirmation</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="payment_screenshot">If possible, please upload a screenshot of your payment. Do ensure that the uploaded file is an image (JPEG/JPG/PNG).</label>
+                    <input type="file" class="form-control-file" id="payment_screenshot" name="payment_screenshot" accept="image/*">
+                    <!--<div class="invalid-feedback">Please select a file</div>-->
+                </div>
+            </div>
+        </div>
+    </br>
+        <div class = "text-center">
+          <button type="submit" class="btn btn-success" style="background-color:green;font-size:40px">Proceed</button>
+        </div>
+    </br>
+    </form>
+</div>
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+</script>
+{% endblock %}

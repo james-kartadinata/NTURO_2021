@@ -1,0 +1,243 @@
+<!--NTURO CATEGORIES-->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Categories
+{% endblock %}
+
+{% block main %}
+<br/>
+<div class="container sections" style="text-align:center;">
+  <!--<div class="row" style="background-color: rgb(255, 196, 0);">
+    <h1 class="col-md-12" style="text-align: center;font-family: arcade;font-size: 5em;">Promotions</h1>
+  </div>
+</br>
+  <div class="card" style="padding-top:0em;padding-bottom:0em;">
+    <div class="card-header" style="background-color:rgb(0, 255, 106);">
+      <h3 style="font-family: ka1;font-size:2em">Party Up</h3>
+    </div>
+    <div class="card-body">
+      <p style="text-align:left;margin-bottom:0em;">Sign up with 2 other friends to get discounted prices for the following categories! All 3 participants must register together for the same category using the "Bundle Registration" button. Payment for all 3 participants will be collected together at the end of the registration.</p>
+    </br>
+      <table class="table col-md-8 mx-auto" style="text-align:center;">
+        <thead style="font-size:20px;background-color:paleturquoise;">
+          <td>
+            <b>Race Category</b>
+          </td>
+          <td>
+            <b>Bundle Price (Applicable until TBC)</b>
+          </td>
+          <td>
+            <b>Usual Price</b>
+          </td>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Individual 75KM</th>
+            <td>
+              <b>$17/pax</b>
+            </td>
+            <td>
+              <b>$20/pax</b>
+            </td>
+          </tr>
+          <tr>
+            <th>Individual 100KM</th>
+            <td>
+              <b>$22/pax</b>
+            </td>
+            <td>
+              <b>$25/pax</b>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+        <a href="/bundle_indiv_registration" class="btn btn-outline-danger" style="font-size:2.5em;" role="button">Bundle Registration</a>
+    </div>
+  </div>
+  <div class="card" style="padding-top:0em;padding-bottom:0em;">
+    <div class="card-header" style="background-color:rgb(0, 255, 106);">
+      <h3 style="font-family: ka1;font-size:2em">Beta Access until 11 April 2359</h3>
+    </div>
+    <div class="card-body">
+      <p style="text-align:left;margin-bottom:0em;">
+        Register <b>NOW</b> to enjoy early bird prices on all categories!</br>
+        Scroll below or click <a href=#pricing>here</a> to view prices.
+      </p>
+    </div>
+  </div>-->
+</br></br>
+  <div class="container sections" id="categories">
+    <div class="row" style="background-color: rgb(255, 196, 0);">
+      <h1 class="col-md-12" style="text-align: center;font-family: arcade;font-size: 5em;">Categories</h1>
+    </div>
+    <!--<div style="text-align: center;color: rgb(255, 0, 0);">
+      <span class="blinking" style="font-family: ka1;font-size: 3em;">SIGN UP NOW</span>
+  </div>-->
+  </br>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card" style="padding-top:0em;padding-bottom:0em;">
+          <div class="card-header" style="background-color:rgb(104, 215, 235);">
+            <h3 style="font-family: ka1;font-size:2em">Multiplayer</h3>
+          </div>
+          <div class="card-body">
+            <p style="text-align:left;margin-bottom:0em;">The following distances are available for teams:</p>
+            <ul style="text-align:left;">
+              <li>42KM (Team of 2)</li> 
+              <li>200KM (Team of 4)</li> 
+            </ul>
+            <p style="text-align:left;margin-bottom:0em;">Do take note that there is no requirement for each member's contribution to the total distance.</p>   
+            <!--<a href="/team_registration" class="btn btn-outline-danger" style="font-size:2.5em;" role="button">Team Category Registration</a>-->
+            <a class="btn btn-danger disabled" style="font-size:2.5em;" role="button">Registration Closed</a>
+          </div>
+        </div>
+      </div> 
+      <div class="col-md-6">
+        <div class="card" style="padding-top:0em;padding-bottom:0em;">
+          <div class="card-header" style="background-color:rgb(104, 215, 235);">
+            <h3 style="font-family: ka1;font-size:2em">Single Player</h3>
+          </div>
+          <div class="card-body">
+            <p style="text-align:left;margin-bottom:0em;">The following distances are available for individuals:</p>
+              <ul style="text-align:left;">
+                <li>10KM</li> 
+                <li>42KM</li>
+                <li>75KM</li>
+                <li>100KM</li> 
+              </ul>    
+            <!--<a href="/indiv_registration" class="btn btn-outline-danger" style="font-size:2.5em;" role="button">Individual Category Registration</a>-->
+            <a class="btn btn-danger disabled" style="font-size:2.5em;" role="button">Registration Closed</a>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+  <div class="container sections" id="pricing">
+    <div class="row" style="background-color: rgb(255, 196, 0);">
+      <h1 class="col-md-12" style="text-align: center;font-family: arcade;font-size: 5em;">Pricing & Entitlements</h1>
+    </div>
+    <div class="table-responsive">
+      <p style="text-align:center;">Race entitlements will be mailed after the end of NTURO 2021. Event shirt design can be found <a href="/information#shirt">here</a>.</br>Items in goodie bags will vary depending on category.</p>
+      <table class="table col-md-8 mx-auto" style="text-align:left">
+        <thead style="font-size:20px;background-color:paleturquoise;">
+          <td>
+            <b>Race Category</b>
+          </td>
+          <!--<td>
+            <b>Early Bird Price (Until 11 April 2359)</b>
+          </td>-->
+          <td>
+            <b><!--Usual-->Price</b>
+          </td>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Individual 10KM</th>
+            <!--<td>
+              <b>$10/pax</b>
+            </td>-->
+            <td>
+              <b>$12/pax</b>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:left;" colspan="3">
+              <ul>
+                <li>NTURO 2021 Drifit Shirt</li>
+                <li>NTURO 2021 Goodie Bag</li>
+                <li>Finisher E-Certificate</li>
+              </ul>
+            </td></tr>
+          <tr>
+            <th>Individual 42KM</th>
+            <!--<td>
+              <b>$12/pax</b>
+            </td>-->
+            <td>
+              <b>$15/pax</b>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:left;" colspan="3">
+              <ul>
+                <li>NTURO 2021 Drifit Shirt</li>
+                <li>NTURO 2021 Goodie Bag</li>
+                <li>Finisher E-Certificate</li>
+              </ul>
+            </td></tr>
+          <tr>
+            <th>Individual 75KM</th>
+            <!--<td>
+              <b>$15/pax</b>
+            </td>-->
+            <td>
+              <b>$20/pax</b>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:left;" colspan="3">
+              <ul>
+                <li>NTURO 2021 Drifit Shirt</li>
+                <li>NTURO 2021 Goodie Bag</li>
+                <li>Finisher E-Certificate</li>
+              </ul>
+            </td></tr>
+          <tr>
+            <th>Individual 100KM</th>
+            <!--<td>
+              <b>$20/pax</b>
+            </td>-->
+            <td>
+              <b>$25/pax</b>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:left;" colspan="3">
+              <ul>
+                <li>Exclusive NTURO 2021 Drifit Shirt 100KM Finisher Edition</li>
+                <li>NTURO 2021 Goodie Bag</li>
+                <li>Finisher E-Certificate</li>
+              </ul>
+            </td></tr>
+          <tr>
+            <th>Team of 2 - 42KM</th>
+            <!--<td>
+              <b>$12/pax</b>
+            </td>-->
+            <td>
+              <b>$15/pax</b>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:left;" colspan="3">
+              <ul>
+                <li>NTURO 2021 Drifit Shirt</li>
+                <li>NTURO 2021 Goodie Bag</li>
+                <li>Finisher E-Certificate</li>
+              </ul>
+            </td></tr>
+          <tr>
+            <th>Team of 4 - 200KM</th>
+            <!--<td>
+              <b>$15/pax</b>
+            </td>-->
+            <td>
+              <b>$20/pax</b>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align:left;" colspan="3">
+              <ul>
+                <li>NTURO 2021 Drifit Shirt</li>
+                <li>NTURO 2021 Goodie Bag</li>
+                <li>Finisher E-Certificate</li>
+              </ul>
+            </td></tr>
+        </tbody>
+      </table>  
+    </div>
+  </div>
+</div>
+{% endblock %}

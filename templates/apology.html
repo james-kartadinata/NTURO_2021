@@ -1,0 +1,16 @@
+<!--ERROR PAGE-->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block main %}
+<div class="container sections" style="text-align: center;">
+</br>
+    <h1 style="text-align: center;">Error {{ top | urlencode }}</h1>
+    <img alt="{{ top }}" class="img-fluid" src="/static/images/nturo_logos/logo.png" title="Error {{ top }}" style="height: 10em;">
+    <h1 style="text-align: center;">{{ bottom | urlencode }}</h1>
+</div>
+{% endblock %}

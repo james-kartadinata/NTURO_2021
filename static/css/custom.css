@@ -1,0 +1,209 @@
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .sections{
+      	padding-top:50px;
+      	padding-bottom:50px;
+      }
+
+      nav{
+      	background-color: white;
+      }
+
+      #category .row div{
+      	padding-top:30px;
+      	padding-bottom:30px;
+      }
+
+      html{
+        scroll-behavior: smooth;
+      }
+
+header {
+  position: relative;
+  height: 100%;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+p{
+  text-align: left;
+}
+
+a{
+  word-break: break-all;
+}
+
+header iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+  top:10%;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+header .mobile-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.fill {
+  height:100%;
+  min-height:100%;
+}
+
+html, body{
+  height:100%;
+}
+
+.navbarSupportedContent{
+  display:flex;
+}
+.navbarSupportedContent ul {
+  margin:0 3rem 0 0;
+  padding:0;
+  list-style:none;
+  display:flex;
+  flex:1 0 0%;
+  justify-content:space-between
+}
+.navbarSupportedContent ul a {
+  display:block;
+  padding:5px 10px;
+}
+
+header .mobile-overlay {
+    background: url('https://img.youtube.com/vi/mQcoLu7hVOY/maxresdefault.jpg') black no-repeat center center scroll;
+    background-size: cover;
+    filter: blur(5px);
+  }
+
+  .arrow {
+          font-size:50px;
+          animation: blinker 3s linear infinite;
+          -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg) scale(.5, 1);
+      }
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.table-responsive td{
+      text-align:center;
+    }
+    #info h3{
+      padding-top:50px;
+    }
+
+  #sponsors img{
+    max-height:300px;
+    height:auto;
+    max-width:100%;
+
+  }
+  #sponsors .row{
+    padding-top:20px;
+    padding-bottom:20px;
+  }
+  #faq .row div{
+    padding-top:15px;
+    padding-bottom:15px;
+  }
+
+  .btn {
+    border: white;
+    font-family: Anton,sans-serif;
+    background-color: inherit;
+    padding: 0px;
+    cursor: pointer;
+    display: inline-block;
+    white-space:normal; 
+    word-wrap: break-word; 
+    word-break: normal;
+        }
+
+@font-face {
+  font-family: minecraft;
+  src: url("/static/fonts/Minecraft.ttf");
+}
+
+@font-face {
+  font-family: arcade_boxes;
+  src: url("/static/fonts/Arcade_Boxes.ttf");
+}
+
+@font-face {
+  font-family: arcadeclassic;
+  src: url("/static/fonts/ARCADECLASSIC.TTF");
+}
+
+@font-face {
+  font-family: ka1;
+  src: url("/static/fonts/ka1.ttf");
+}
+
+@font-face {
+  font-family: arcade;
+  src: url("/static/fonts/ARCADE.TTF");
+}
+
+.blinking{
+  animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+  0%{     color: inherit;    }
+  49%{    color: inherit; }
+  60%{    color: transparent; }
+  99%{    color:transparent;  }
+  100%{   color: inherit;    }
+}
+
+.clickable-image
+{
+    cursor: pointer;
+}

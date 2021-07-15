@@ -1,0 +1,151 @@
+<!--USE AS BASE FOR ALL OTHER PAGES-->
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="NTURO 2021">
+    <meta name="author" content="NTU Aquathlon">
+    <title>NTURO 2021: {% block title %}{% endblock %}</title>
+    <link rel=icon href=/static/images/nturo_logos/logo.png>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="/static/css/custom.css" rel="stylesheet">
+    <link rel="preload" as="font" href="/static/fonts/ARCADE.TTF" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/static/fonts/Arcade_Boxes.ttf" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/static/fonts/ARCADECLASSIC.TTF" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/static/fonts/ka1.ttf" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/static/fonts/Minecraft.ttf" type="font/ttf" crossorigin="anonymous">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-72214160-5"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-72214160-5');
+  </script>
+  </head>
+
+  <body data-spy="scroll" data-target="#navbar">
+    <nav class="navbar navbar-light bg-light fixed-top navbar-expand-lg" id="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/static/images/nturo_logos/logo.png" alt="NTURO" class="img-fluid" style="max-width:24px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav w-100 justify-content-around">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/about#">About NTURO</a>
+              <a class="dropdown-item" href="/about#committee">NTURO 2021 Committee</a>
+              <a class="dropdown-item" href="/about#team">NTU Aquathlon</a>
+              <a class="dropdown-item" href="/about#2019">NTURO 2019</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <!--<a class="dropdown-item" href="/categories#">Promotions</a>-->
+              <a class="dropdown-item" href="/categories#categories">Categories</a>
+              <a class="dropdown-item" href="/categories#pricing">Pricing & Entitlements</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/overview">Overview</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Information
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/information#">Race Information</a>
+              <a class="dropdown-item" href="/information#c1_info">Swim Challenge</a>
+              <a class="dropdown-item" href="/information#c2_info">Creativity Challenge</a>
+              <a class="dropdown-item" href="/information#c3_info">Elevation Challenge</a>
+              <a class="dropdown-item" href="/information#shirt">NTURO 2021 Shirt</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/submission">Submission</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Leaderboards
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/leaderboards/m10_leaderboard">Individual Male 10KM</a>
+              <a class="dropdown-item" href="/leaderboards/m42_leaderboard">Individual Male 42KM</a>
+              <!--<a class="dropdown-item" href="/leaderboards/m75_leaderboard">Individual Male 75KM</a>-->
+              <a class="dropdown-item" href="/leaderboards/m100_leaderboard">Individual Male 100KM</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/leaderboards/f10_leaderboard">Individual Female 10KM</a>
+              <a class="dropdown-item" href="/leaderboards/f42_leaderboard">Individual Female 42KM</a>
+              <a class="dropdown-item" href="/leaderboards/f75_leaderboard">Individual Female 75KM</a>
+              <a class="dropdown-item" href="/leaderboards/f100_leaderboard">Individual Female 100KM</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/leaderboards/t42_leaderboard">Team 42KM</a>
+              <a class="dropdown-item" href="/leaderboards/t200_leaderboard">Team 200KM</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/leaderboards/swim_leaderboard">Swim Challenge</a>
+              <a class="dropdown-item" href="/leaderboards/creativity_leaderboard">Creativity Challenge</a>
+              <a class="dropdown-item" href="/leaderboards/elevation_leaderboard">Elevation Challenge</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/partners">Partners</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/faq">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
+    {% block main %}{% endblock %}
+    
+  </body>
+  
+  <footer class="py-5 bg-light">
+    <div class="container">
+    <div class="row">
+      <div class="col-3" style="overflow:hidden">
+      <div class="float-left">
+        <a class="navbar-brand" href="/" target="_blank">
+          <img src="/static/images/nturo_logos/logo.png" alt="NTURO" class="img-fluid" style="max-height:24px;">
+        </a>
+      </div>
+    </div>
+      <small class="col-6 mx-auto text-muted align-self-center" style="text-align:center">Copyright &copy; <script>document.write(new Date().getFullYear())</script></br><a href="http://ntuaquathlon.com" target="_blank">NTU Aquathlon</a></small>  
+    <div class="col-3" style="overflow:hidden">
+      <div class="float-right">
+        <a class="navbar-brand" href="https://www.instagram.com/nturo.ntuaquathlon/" target="_blank" style="margin-right:0">
+          <img src="/static/images/logos/ig.png" alt="IG Logo" style="max-height:24px;">
+        </a>
+        <a class="navbar-brand" href="https://www.facebook.com/NTURO" target="_blank" style="margin-right:0">
+          <img src="/static/images/logos/fb.png" alt="FB Logo" style="max-height:24px;">
+        </a>
+        
+      </div>
+    </div>
+  
+    </div>
+    </div>
+  </footer>
+</html>
